@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/IndieFlower-Regular.ttf",
+      "sha1": "dab8ff786dd1c6a3e8fa8a54d4d59cf9a703efe1"
+    },
+    {
+      "path": "src/assets/fonts/Mogra-Regular.ttf",
+      "sha1": "b3bc3a6cfa93d0f92fd5a22e7ded0a3f4f5ab6ff"
+    }
+  ]
+}

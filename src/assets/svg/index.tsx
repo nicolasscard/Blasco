@@ -1,0 +1,11 @@
+export { default as PetCollar } from './PetCollar';
+export { default as Services } from './Services';
+export { default as Location } from './Location';
+export { default as Phone } from './Phone';
+export { default as DogToy } from './DogToy';
+export { default as Portada } from './Portada';
+export { default as IconoApp } from './IconoApp';
+export { default as IconoAppSVG } from './IconoAppSVG';
+export { default as Home } from './Home';
+export { default as Images } from './Images';
+export { default as DogBath } from './DogBath';
