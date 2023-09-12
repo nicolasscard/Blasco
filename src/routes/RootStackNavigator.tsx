@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import { TopTabNavigator } from './TopTabNavigator';
 import { ThemeContext } from '../context/themeContext/ThemeContext';
-import { WelcomeScreen, ServicesScreen, ContactScreen, PermissionsScreen } from '../screens';
+import { WelcomeScreen, ServicesScreen, ContactScreen, PermissionsScreen, ReduxExampleScreen } from '../screens';
 
 export type StackParams = {
   TopTabNavigator: undefined,
@@ -14,6 +14,7 @@ export type StackParams = {
   Contact: undefined,
   Location: undefined,
   Permissions: undefined,
+  ReduxExample: undefined,
 }
 
 const Stack = createStackNavigator<StackParams>();
@@ -37,6 +38,7 @@ export const RootStackNavigator = () => {
           }}
         >
           <Stack.Screen name="Welcome" options={{ title:"Bienvenido" }} component={ WelcomeScreen } />
+          <Stack.Screen name="ReduxExample" options={{ title:"ReduxExample" }} component={ ReduxExampleScreen } />
 
           <Stack.Screen name="TopTabNavigator" options={{ headerShown: false }} component={ TopTabNavigator } />
           <Stack.Screen name="Services" options={{ headerShown: false }} component={ ServicesScreen } />

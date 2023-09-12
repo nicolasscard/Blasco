@@ -1,10 +1,12 @@
 import 'react-native-gesture-handler';
-import {enableLatestRenderer} from 'react-native-maps';
-
 import React from 'react';
+import {enableLatestRenderer} from 'react-native-maps';
+import { Provider as ReduxProvider } from 'react-redux';
+
 import { RootStackNavigator } from './src/routes/RootStackNavigator';
 import { ThemeProvider } from './src/context/themeContext/ThemeContext';
 import { PermissionsProvider } from './src/context/PermissionsContext';
+import { store } from './src/store';
 
 const App = () => {
   enableLatestRenderer();
@@ -18,11 +20,13 @@ const App = () => {
 
 const AppState = ({ children }: any) => {
   return (
-    <PermissionsProvider>
-      <ThemeProvider>
-        { children }
-      </ThemeProvider>
-    </PermissionsProvider>
+    <ReduxProvider store={store}>
+      <PermissionsProvider>
+        <ThemeProvider>
+          { children }
+        </ThemeProvider>
+      </PermissionsProvider>
+    </ReduxProvider>
   );
 }
 
@@ -36,6 +40,7 @@ WELCOME
 - opcion skip
 - elegir raza con un flatList de card de imagenes de razas
 - gestionar la fecha de ultimo corte
+- cambiar el useDogs hooks por el redux de ejemplo de CounterScreen (indagar el manejo de error)
 
 CONTACTO
 * Whazap
@@ -59,7 +64,7 @@ OTROS
 - controlar la conexion a internet !
 - revisar el backgroundColor general de toda la app (el configurado en el navigator). 
   Para no tener q ponerlo manualmente en cada screen
-- 
+- agregar el manejo de errores en todos los procesos asyncronos de respuesta de api
 
 CORRECCIONES
 - Corregir goback de navegacion de mapas, si pedi permiso, te regresa a pantalla de permisos

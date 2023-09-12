@@ -6,3 +6,4 @@ export { default as AlbumsScreen } from './AlbumsScreen';
 export { default as LocationScreen } from './LocationScreen';
 export { default as PetShopScreen } from './PetShopScreen';
 export { default as WelcomeScreen } from './Welcome/WelcomeScreen';
+export { default as ReduxExampleScreen } from './ReduxExample';
